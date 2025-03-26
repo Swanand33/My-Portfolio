@@ -1,28 +1,38 @@
 # My Portfolio Website
 
 ## Overview
-A personal portfolio website showcasing my projects, skills, and contact information.
+A modern, responsive personal portfolio website showcasing my professional journey, skills, and projects in data analysis and technology.
+- Responsive and mobile-friendly design
+- Clean, modern UI/UX
 
-D:\All Dell\Cell Change\Screenshots\Screenshot 2025-03-25 203014.png
+img/Screenshot 2025-03-25 203014.png
 
 ## TL;DR  
 You can fork this repo to modify and make changes of your own.  
 Please give me proper credit by linking back to [Swanand33](https://github.com/Swanand33). Thanks! 🙌  
 
-
-## Technologies Used
+##  Technologies Used
 - HTML5
 - CSS3
 - JavaScript
+- Responsive Web Design
+- Netlify (Hosting & Form Submissions)
 
-## Setup and Installation
+
+## 🔧 Setup and Installation
 1. Clone the repository
+   ```bash
+   git clone https://github.com/Swanand33/My-Portfolio.git
+   ```
 2. Open `index.html` in your browser
+3. No additional setup required
 
-## Features
-- Responsive design
-- Project showcase
-- Contact form
+##  Key Highlights
+- Fully responsive design
+- Smooth navigation
+- Professionally designed contact section
+- Integrated social media links
 
-## Deployment
-Deployed on Netlify
+
+## 🙌 Contributions
+Suggestions and contributions are welcome! 
