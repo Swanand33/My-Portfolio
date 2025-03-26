@@ -1,0 +1,13 @@
+{
+    "name": "swanand-portfolio",
+    "version": "1.0.0",
+    "description": "Personal portfolio website",
+    "main": "index.html",
+    "scripts": {
+      "start": "echo 'Open index.html'",
+      "test": "echo 'No tests specified'"
+    },
+    "keywords": ["portfolio", "personal website"],
+    "author": "Swanand Potnis",
+    "license": "ISC"
+  }
