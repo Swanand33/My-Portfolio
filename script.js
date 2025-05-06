@@ -32,9 +32,10 @@ window.addEventListener('load', () => {
 function startTypingEffect() {
     const phrases = [
         "I'm an Engineer",
-        "I'm an Data Analyst",
-        "I'm a Python Developer",
-        "I'm an AI Enthusiast"
+        "I'm a Data Analyst",
+        "I'm a Pythonist",
+        "I'm an AI Practitioner"
+
     ];
     let currentPhraseIndex = 0;
     let currentCharIndex = 0;
