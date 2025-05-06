@@ -435,13 +435,14 @@
                 <h2 class="section-heading">About Me</h2>
                 <div class="about">
                     <div class="about-img">
-                        <img src="img/User.jpg" alt="Swanand Potnis">
+                        <img src="img/1726642117836.jpg" alt="Swanand Potnis">
                     </div>
                     <div class="about-content">
                         <h2>Hello, I'm Swanand Potnis</h2>
                         <p>I'm a passionate AI & data enthusiast with a strong background in financial analytics, AI-driven solutions, and business intelligence. My journey started with financial data analysis and market research, evolving into a career focused on building AI-powered applications, insightful dashboards, and intelligent automation systems.</p>
                         <p>My approach blends technical expertise with strategic problem-solving to create impactful solutions that drive business decisions.</p>
                         <p>When I'm not working, you can find me exploring financial markets, learning about AI advancements, or optimizing workflows for better efficiency.</p>
+                        <button class="btn btn-primary">Download Resume</button>
                     </div>
                 </div>
             </div>
@@ -473,38 +474,31 @@
             </div>
             <div class="contact-form">
                 <!-- Netlify Form Setup -->
-                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html">
-                  <!-- Hidden input to make Netlify detect the form -->
-                  <input type="hidden" name="form-name" value="contact" />
-              
-                  <!-- Honeypot field for spam protection -->
-                  <p hidden>
-                    <label>Don’t fill this out: <input name="bot-field" /></label>
-                  </p>
-              
-                  <!-- Name -->
-                  <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                  </div>
-              
-                  <!-- Email -->
-                  <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                  </div>
-              
-                  <!-- Message -->
-                  <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                  </div>
-              
-                  <!-- Submit Button -->
-                  <button type="submit" class="btn btn-primary">Send Message</button>
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
+                    <input type="hidden" name="form-name" value="contact" />
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <!-- Optional honeypot field for spam protection -->
+                    <div hidden>
+                        <input name="bot-field" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
-              </div>
-              
+            </div>
+        </div>
+    </div>
+</section>
+        
         <!-- Footer -->
         <footer>
             <div class="container">
