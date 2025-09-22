@@ -11,6 +11,11 @@
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
 
 [[redirects]]
+  from = "/success"
+  to = "/success.html"
+  status = 200
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
