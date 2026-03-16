@@ -3,167 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Message Sent Successfully - Swanand Potnis</title>
-    <meta name="description" content="Thank you for your message. I'll get back to you soon!">
+    <title>Message Sent — Swanand Potnis</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        .success-container {
-            min-height: 100vh;
+        .success-wrap {
+            min-height: 100svh;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: var(--bg-primary);
-            padding: 2rem;
+            padding: 40px 24px;
         }
-
         .success-card {
-            background: var(--bg-secondary);
+            background: var(--bg-card);
+            border: 1px solid var(--border);
             border-radius: 24px;
-            padding: 3rem;
-            text-align: center;
-            max-width: 500px;
+            padding: 48px 40px;
+            max-width: 480px;
             width: 100%;
-            border: 1px solid var(--border-color);
+            text-align: center;
         }
-
         .success-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #10b981, #059669);
+            width: 64px;
+            height: 64px;
+            background: rgba(34, 197, 94, 0.15);
+            border: 1px solid rgba(34, 197, 94, 0.3);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 2rem;
-            animation: successPulse 2s ease-in-out infinite;
+            margin: 0 auto 28px;
         }
-
-        .success-icon svg {
-            width: 40px;
-            height: 40px;
-            color: white;
+        .success-icon svg { width: 28px; height: 28px; color: #22C55E; }
+        .success-card h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: var(--text);
+            margin-bottom: 12px;
         }
-
-        .success-title {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 1rem;
+        .success-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 32px;
         }
-
-        .success-message {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-
-        .success-details {
-            background: var(--bg-primary);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            border: 1px solid var(--border-color);
-        }
-
-        .success-details p {
-            margin: 0.5rem 0;
-            color: var(--text-secondary);
-        }
-
-        .success-details strong {
-            color: var(--text-primary);
-        }
-
-        .success-actions {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        @keyframes successPulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        @media (max-width: 768px) {
-            .success-card {
-                padding: 2rem;
-                margin: 1rem;
-            }
-
-            .success-title {
-                font-size: 1.5rem;
-            }
-
-            .success-actions {
-                flex-direction: column;
-                align-items: center;
-            }
+        .success-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+        .timer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: var(--text-dim);
         }
     </style>
 </head>
 <body>
-    <div class="success-container">
+    <div class="success-wrap">
         <div class="success-card">
             <div class="success-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20 6L9 17l-5-5"/>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"/>
                 </svg>
             </div>
-
-            <h1 class="success-title">Message Sent Successfully!</h1>
-
-            <p class="success-message">
-                Thank you for reaching out! Your message has been received and I'll get back to you within 24 hours.
-            </p>
-
-            <div class="success-details">
-                <p><strong>What happens next?</strong></p>
-                <p>• I'll review your message carefully</p>
-                <p>• You'll receive a personalized response via email</p>
-                <p>• For urgent matters, connect with me on LinkedIn</p>
-            </div>
-
+            <h1>Message sent.</h1>
+            <p>Thanks for reaching out! I'll review your message and reply within 24 hours. For urgent matters, ping me on LinkedIn.</p>
             <div class="success-actions">
                 <a href="/" class="btn btn-primary">Back to Portfolio</a>
-                <a href="https://www.linkedin.com/in/swanandpotnis/" target="_blank" class="btn btn-outline">
-                    Connect on LinkedIn
-                </a>
+                <a href="https://www.linkedin.com/in/swanandpotnis/" target="_blank" class="btn btn-ghost">LinkedIn ↗</a>
+                <a href="https://medium.com/@SwanandPotnis" target="_blank" class="btn btn-ghost">Medium ↗</a>
             </div>
+            <p class="timer" id="timer"></p>
         </div>
     </div>
-
     <script>
-        // Auto redirect after 10 seconds (optional)
+        let s = 10;
+        const el = document.getElementById('timer');
         setTimeout(() => {
-            const countdown = document.createElement('p');
-            countdown.style.marginTop = '2rem';
-            countdown.style.color = 'var(--text-secondary)';
-            countdown.style.fontSize = '0.9rem';
-            document.querySelector('.success-card').appendChild(countdown);
-
-            let seconds = 10;
-            const timer = setInterval(() => {
-                countdown.textContent = `Redirecting to portfolio in ${seconds} seconds...`;
-                seconds--;
-
-                if (seconds < 0) {
-                    clearInterval(timer);
-                    window.location.href = '/';
-                }
+            const t = setInterval(() => {
+                el.textContent = `Redirecting in ${s}s...`;
+                s--;
+                if (s < 0) { clearInterval(t); window.location.href = '/'; }
             }, 1000);
-        }, 5000);
-
-        // Theme detection
-        if (localStorage.getItem('theme') === 'dark' ||
-            (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.setAttribute('data-theme', 'dark');
-        }
+        }, 3000);
     </script>
 </body>
 </html>

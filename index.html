@@ -3,694 +3,717 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swanand Potnis - AI Developer & Data Analyst</title>
-    <meta name="description" content="AI Developer and Data Analyst building production-ready solutions. Specializing in API documentation, data quality analysis, and intelligent automation.">
+    <title>Swanand Potnis — AI Developer & Data Analyst</title>
+    <meta name="description" content="Data Analyst & AI Developer building production-ready AI tools. Creator of llm-behave, DocGen Pro, and more. Open to full-time and freelance opportunities.">
+    <meta property="og:title" content="Swanand Potnis — AI Developer & Data Analyst">
+    <meta property="og:description" content="Building AI tools that work in production. 3 live apps, 15+ projects, open source library author.">
+    <meta property="og:url" content="https://swanand33.netlify.app">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;1,14..32,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="loader"></div>
-    <div class="content">
-        <!-- Navigation -->
-        <div class="container">
-            <nav>
-                <div class="logo">Swanand Potnis</div>
-                <button class="menu-toggle" id="menuToggle">☰</button>
-                <div class="nav-links" id="navLinks">
-                    <a href="#live-apps">Live Apps</a>
-                    <a href="#projects">Case Studies</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
-                    <a href="https://github.com/Swanand33" target="_blank" class="nav-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                    </a>
-                    <button class="theme-toggle" id="themeToggle">
-                        <svg id="moonIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block;">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <svg id="sunIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: none;">
-                            <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-            </nav>
-            <div class="nav-mobile" id="navMobile" style="display: none;">
-                <a href="#live-apps">Live Apps</a>
-                <a href="#projects">Case Studies</a>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+        <div class="container nav-inner">
+            <a href="#" class="nav-logo">Swanand Potnis</a>
+            <div class="nav-links" id="navLinks">
+                <a href="#apps">Apps</a>
+                <a href="#llm-behave">llm-behave</a>
+                <a href="#projects">Projects</a>
                 <a href="#skills">Skills</a>
                 <a href="#about">About</a>
+                <a href="https://medium.com/@SwanandPotnis" target="_blank">Blog</a>
                 <a href="#contact">Contact</a>
             </div>
+            <div class="nav-actions">
+                <a href="https://github.com/Swanand33" target="_blank" class="nav-icon" aria-label="GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/swanandpotnis/" target="_blank" class="nav-icon" aria-label="LinkedIn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://medium.com/@SwanandPotnis" target="_blank" class="nav-icon" aria-label="Medium">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+                </a>
+                <button class="nav-menu" id="menuToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
-        
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-badge">🚀 3 Live Applications in Production</div>
-                <h1>Data Analyst & AI Developer<br>Building Intelligent Solutions</h1>
-                <div class="typing-effect" id="typingEffect">I'm an Engineer</div>
-                <p>Transforming complex data challenges into production-ready AI solutions. Specializing in API automation, data analysis, and intelligent systems that deliver measurable business value.</p>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary" onclick="scrollToSection('live-apps')">
-                        <span>Try Live Apps</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                        </svg>
-                    </button>
-                    <button class="btn btn-outline" onclick="scrollToSection('contact')">Let's Talk</button>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">15+</span>
-                        <span class="stat-label">Projects Delivered</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">3</span>
-                        <span class="stat-label">Live Applications</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">90%</span>
-                        <span class="stat-label">Process Automation</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="nav-mobile" id="navMobile">
+            <a href="#apps" class="mob-link">Apps</a>
+            <a href="#llm-behave" class="mob-link">llm-behave</a>
+            <a href="#projects" class="mob-link">Projects</a>
+            <a href="#skills" class="mob-link">Skills</a>
+            <a href="#about" class="mob-link">About</a>
+            <a href="https://medium.com/@SwanandPotnis" target="_blank" class="mob-link">Blog ↗</a>
+            <a href="#contact" class="mob-link">Contact</a>
+        </div>
+    </nav>
 
-        <!-- Live Applications Section -->
-        <section id="live-apps">
-            <div class="container">
-                <h2 class="section-heading">🚀 Live Production Applications</h2>
-                <p class="section-subtitle">Real tools solving real problems - Try them now!</p>
-                
-                <div class="live-apps-grid">
-                    <!-- DocGen Pro -->
-                    <div class="live-app-card featured">
-                        <div class="app-status">
-                            <span class="status-badge live">LIVE</span>
-                            <span class="users-count">100+ API docs generated</span>
-                        </div>
-                        <div class="app-screenshot">
-                            <img src="img/docgen-screenshot.png" alt="DocGen Pro Interface">
-                            <div class="app-overlay">
-                                <a href="https://docgen.up.railway.app/" target="_blank" class="btn btn-primary">Try Live Demo →</a>
-                            </div>
-                        </div>
-                        <div class="app-content">
-                            <h3>DocGen Pro</h3>
-                            <p class="app-tagline">Transform OpenAPI specs into beautiful documentation in seconds</p>
-                            <div class="app-features">
-                                <div class="feature-item">
-                                    <svg width="16" height="16" fill="currentColor"><circle cx="8" cy="8" r="3"/></svg>
-                                    <span>90% faster documentation</span>
-                                </div>
-                                <div class="feature-item">
-                                    <svg width="16" height="16" fill="currentColor"><circle cx="8" cy="8" r="3"/></svg>
-                                    <span>Multi-format export</span>
-                                </div>
-                                <div class="feature-item">
-                                    <svg width="16" height="16" fill="currentColor"><circle cx="8" cy="8" r="3"/></svg>
-                                    <span>Real-time preview</span>
-                                </div>
-                            </div>
-                            <div class="app-tech">
-                                <span class="tech-badge">React</span>
-                                <span class="tech-badge">Node.js</span>
-                                <span class="tech-badge">OpenAPI</span>
-                            </div>
-                            <div class="app-links">
-                                <a href="https://docgen.up.railway.app/" target="_blank" class="app-link primary">Launch App</a>
-                                <a href="https://github.com/Swanand33/docgen-pro" target="_blank" class="app-link">View Code</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Data Quality Detective -->
-                    <div class="live-app-card">
-                        <div class="app-status">
-                            <span class="status-badge live">LIVE</span>
-                            <span class="users-count">700+ datasets analyzed</span>
-                        </div>
-                        <div class="app-screenshot">
-                            <img src="img/mdqd-screenshot.png" alt="Data Quality Detective">
-                            <div class="app-overlay">
-                                <a href="https://mdqd.vercel.app/" target="_blank" class="btn btn-primary">Try Live Demo →</a>
-                            </div>
-                        </div>
-                        <div class="app-content">
-                            <h3>Data Quality Detective</h3>
-                            <p class="app-tagline">Instant CSV analysis with AI-powered insights</p>
-                            <div class="app-features">
-                                <div class="feature-item">
-                                    <svg width="16" height="16" fill="currentColor"><circle cx="8" cy="8" r="3"/></svg>
-                                    <span>Fast analysis</span>
-                                </div>
-                                <div class="feature-item">
-                                    <svg width="16" height="16" fill="currentColor"><circle cx="8" cy="8" r="3"/></svg>
-                                    <span>Quality scoring</span>
-                                </div>
-                                <div class="feature-item">
-                                    <svg width="16" height="16" fill="currentColor"><circle cx="8" cy="8" r="3"/></svg>
-                                    <span>Clean format</span>
-                                </div>
-                            </div>
-                            <div class="app-tech">
-                                <span class="tech-badge">Python</span>
-                                <span class="tech-badge">Streamlit</span>
-                                <span class="tech-badge">Pandas</span>
-                            </div>
-                            <div class="app-links">
-                                <a href="https://mdqd.vercel.app/" target="_blank" class="app-link primary">Launch App</a>
-                                <a href="https://github.com/Swanand33/MDQD" target="_blank" class="app-link">View Code</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ClearFeed -->
-                    <div class="live-app-card">
-                        <div class="app-status">
-                            <span class="status-badge beta">BETA</span>
-                            <span class="users-count">AI-Powered News</span>
-                        </div>
-                        <div class="app-screenshot">
-                            <img src="img/clearfeed-screenshot.png" alt="ClearFeed News">
-                            <div class="app-overlay">
-                                <a href="https://clearfeed.vercel.app/" target="_blank" class="btn btn-primary">Try Beta →</a>
-                            </div>
-                        </div>
-                        <div class="app-content">
-                            <h3>ClearFeed</h3>
-                            <p class="app-tagline">AI-curated news aggregation platform which saves time</p>
-                            <div class="app-features">
-                                <div class="feature-item">
-                                    <svg width="16" height="16" fill="currentColor"><circle cx="8" cy="8" r="3"/></svg>
-                                    <span>Smart categorization</span>
-                                </div>
-                                <div class="feature-item">
-                                    <svg width="16" height="16" fill="currentColor"><circle cx="8" cy="8" r="3"/></svg>
-                                    <span>Real-time updates</span>
-                                </div>
-                                <div class="feature-item">
-                                    <svg width="16" height="16" fill="currentColor"><circle cx="8" cy="8" r="3"/></svg>
-                                    <span>consensus rating</span>
-                                </div>
-                            </div>
-                            <div class="app-tech">
-                                <span class="tech-badge">Next.js</span>
-                                <span class="tech-badge">AI/ML</span>
-                                <span class="tech-badge">APIs</span>
-                            </div>
-                            <div class="app-links">
-                                <a href="https://clearfeed.vercel.app/" target="_blank" class="app-link primary">Try Beta</a>
-                                <a href="https://github.com/Swanand33/clearfeed" target="_blank" class="app-link">View Code</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Projects Section (Case Studies) -->
-        <section id="projects">
-            <div class="container">
-                <h2 class="section-heading">Case Studies & Technical Projects</h2>
-                <p class="section-subtitle">Deep-dive into data analysis, AI implementations, and business solutions</p>
-                
-                <div class="projects-slider-container">
-                    <div class="projects-slider" id="projectsSlider">
-                        <!-- AI Bill Shock Detector -->
-                        <div class="project-card">
-                            <div class="project-impact">🎯 90% Accuracy</div>
-                            <div class="project-img">
-                                <img src="img/AI Bill Shock.png" alt="AI Bill Shock Detector">
-                            </div>
-                            <div class="project-content">
-                                <h3>AI Bill Shock Detector</h3>
-                                <p><strong>Challenge:</strong> Unexpected billing anomalies causing customer dissatisfaction</p>
-                                <p><strong>Solution:</strong> ML-powered anomaly detection system with real-time alerts</p>
-                                <p><strong>Impact:</strong> 90% accuracy in detecting anomalies, preventing revenue loss</p>
-                                <div class="tags">
-                                    <span class="tag">Python</span>
-                                    <span class="tag">Scikit-Learn</span>
-                                    <span class="tag">Streamlit</span>
-                                </div>
-                                <a href="https://github.com/Swanand33/AI-bill-shock-analyzer" target="_blank" class="btn btn-outline">View Case Study</a>
-                            </div>
-                        </div>
-                        
-                        <!-- Chat Assistant RAG -->
-                        <div class="project-card">
-                            <div class="project-impact">🤖 Enterprise RAG</div>
-                            <div class="project-img">
-                                <img src="img/Screenshot 2025-07-22 115206.png" alt="Chat Assistant - RAG">
-                            </div>
-                            <div class="project-content">
-                                <h3>Chat Assistant – RAG</h3>
-                                <p><strong>Challenge:</strong> Need for domain-specific AI assistant with data privacy</p>
-                                <p><strong>Solution:</strong> Private RAG implementation with PDF ingestion</p>
-                                <p><strong>Impact:</strong> 100% data privacy, instant knowledge retrieval</p>
-                                <div class="tags">
-                                    <span class="tag">LangChain</span>
-                                    <span class="tag">OpenAI</span>
-                                    <span class="tag">RAG</span>
-                                </div>
-                                <a href="https://github.com/Swanand33/Chat-Assistant---RAG-" target="_blank" class="btn btn-outline">View Project</a>
-                            </div>
-                        </div>
-
-                        <!-- InsightIQ -->
-                        <div class="project-card">
-                            <div class="project-impact">📊 10x Faster</div>
-                            <div class="project-img">
-                                <img src="img/Screenshot 2025-07-19 144706.png" alt="InsightIQ">
-                            </div>
-                            <div class="project-content">
-                                <h3>InsightIQ</h3>
-                                <p><strong>Challenge:</strong> Time-consuming manual data analysis</p>
-                                <p><strong>Solution:</strong> AI-powered CSV analyzer with automated insights</p>
-                                <p><strong>Impact:</strong> 10x faster analysis, automated reporting</p>
-                                <div class="tags">
-                                    <span class="tag">Python</span>
-                                    <span class="tag">Gradio</span>
-                                    <span class="tag">LLM</span>
-                                </div>
-                                <a href="https://github.com/Swanand33/Insight.IQ" target="_blank" class="btn btn-outline">View Project</a>
-                            </div>
-                        </div>
-
-                        <!-- Walmart Sales Analysis -->
-                        <div class="project-card">
-                            <div class="project-impact">💰 $2M Insights</div>
-                            <div class="project-img">
-                                <img src="img/WallmartSS.png" alt="Walmart Sales analysis">
-                            </div>
-                            <div class="project-content">
-                                <h3>Walmart Sales Analysis</h3>
-                                <p><strong>Challenge:</strong> Optimize inventory and identify revenue opportunities</p>
-                                <p><strong>Solution:</strong> Comprehensive sales data analysis with predictive modeling</p>
-                                <p><strong>Impact:</strong> Identified $2M in optimization opportunities</p>
-                                <div class="tags">
-                                    <span class="tag">Python</span>
-                                    <span class="tag">PostgreSQL</span>
-                                    <span class="tag">Excel</span>
-                                </div>
-                                <a href="https://github.com/Swanand33/Walmart-Sales-analysis" target="_blank" class="btn btn-outline">View Analysis</a>
-                            </div>
-                        </div>
-
-                        <!-- Financial Consumer Complaints -->
-                        <div class="project-card">
-                            <div class="project-impact">📈 50K+ Records</div>
-                            <div class="project-img">
-                                <img src="img/Fin.Complaints.jpg" alt="Financial Consumer Complaints">
-                            </div>
-                            <div class="project-content">
-                                <h3>Financial Consumer Complaints</h3>
-                                <p><strong>Challenge:</strong> Understanding patterns in consumer complaints</p>
-                                <p><strong>Solution:</strong> EDA on 50K+ complaint records with trend analysis</p>
-                                <p><strong>Impact:</strong> Identified top 3 complaint categories for action</p>
-                                <div class="tags">
-                                    <span class="tag">Python</span>
-                                    <span class="tag">Pandas</span>
-                                    <span class="tag">DAX</span>
-                                </div>
-                                <a href="https://github.com/Swanand33/Consumer-Complaints-EDA" target="_blank" class="btn btn-outline">View Analysis</a>
-                            </div>
-                        </div>
-                        <!-- Project 4 -->
-                        <div class="project-card">
-                            <div class="project-img">
-                                <img src="img/motorcycle.jpg" alt="Motorcycle Parts Sales">
-                            </div>
-                            <div class="project-content">
-                                <h3>Motorcycle Parts Sales</h3>
-                                <p>SQL-driven analysis of motorcycle parts sales to optimize inventory, boost revenue, and improve customer retention.</p>
-                                <div class="tags">
-                                    <span class="tag">Excel</span>
-                                    <span class="tag">MySQL</span>
-                                    <span class="tag">VS</span>
-                                </div>
-                                <a href="https://github.com/Swanand33/Motorcycle-Parts-Sales" class="btn btn-outline">View Project</a>
-                            </div>
-                        </div>
-
-                        <!-- Project 2 -->
-                        <div class="project-card">
-                            <div class="project-img">
-                                <img src="img/PEP.jpg" alt="Prompt Engineering Playground">
-                            </div>
-                            <div class="project-content">
-                                <h3>Prompt Engineering Playground</h3>
-                                <p>Data-driven analysis of Walmart's sales to optimize costs, uncover revenue trends, and enhance business strategy.</p>
-                                <div class="tags">
-                                    <span class="tag">Python</span>
-                                    <span class="tag">OpenAI</span>
-                                    <span class="tag">Jupyter</span>
-                                </div>
-                                <a href="https://github.com/Swanand33/Walmart-Sales-analysis" class="btn btn-outline">View Project</a>
-                            </div>
-                        </div>
-                        
-                        <!-- Project 5 -->
-                        <div class="project-card">
-                            <div class="project-img">
-                                <img src="img/Std. Ana2.png" alt="Student Data Analysis">
-                            </div>
-                            <div class="project-content">
-                                <h3>Student Data Analysis</h3>
-                                <p>Power BI dashboard analyzing student performance, income distribution, and programming experience trends.</p>
-                                <div class="tags">
-                                    <span class="tag">Excel</span>
-                                    <span class="tag">DAX</span>
-                                    <span class="tag">Power BI</span>
-                                </div>
-                                <a href="https://github.com/Swanand33/Student-Data-Analysis-Dashboard" class="btn btn-outline">View Project</a>
-                            </div>
-                        </div>
-
-                        <!-- Project 6 -->
-                        <div class="project-card">
-                            <div class="project-img">
-                                <img src="img/businessinsights_img.jpg" alt="Business Insights Chatbot">
-                            </div>
-                            <div class="project-content">
-                                <h3>Business Insights Chatbot</h3>
-                                <p>A fully customizable AI chatbot leveraging Hugging Face models, allowing seamless model switching via user-provided API keys, without OpenAI dependency.</p>
-                                <div class="tags">
-                                    <span class="tag">HTML/CSS</span>
-                                    <span class="tag">JavaScript</span>
-                                    <span class="tag">API Integration</span>
-                                </div>
-                                <a href="https://github.com/Swanand33/Business-Insights-Chatbot" class="btn btn-outline">View Project</a>
-                            </div>
-                        </div>
-
-
-                        <!-- Project 7 -->
-                        <div class="project-card">
-                            <div class="project-img">
-                                <img src="img/LCT.jpg" alt="Low Carbon Technology">
-                            </div>
-                            <div class="project-content">
-                                <h3>Low Carbon Technology</h3>
-                                <p>Data-driven analysis of global trade in low-carbon technologies from 1994-2023 to track sustainability trends.</p>
-                                <div class="tags">
-                                    <span class="tag">Python</span>
-                                    <span class="tag">Matplotlib</span>
-                                    <span class="tag">Pandas</span>
-                                </div>
-                                <a href="https://github.com/Swanand33/LowCarbonTrade-EDA" class="btn btn-outline">View Project</a>
-                            </div>
-                        </div>
-
-                        <!-- Add remaining projects with similar structure... -->
-                        
-                    </div>
-                    
-                    <div class="slider-controls">
-                        <button class="slider-btn prev-btn" id="prevBtn">&lt;</button>
-                        <button class="slider-btn next-btn" id="nextBtn">&gt;</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Skills Section Enhanced -->
-        <section id="skills">
-            <div class="container">
-                <h2 class="section-heading">Skills & Expertise</h2>
-                <p class="section-subtitle">See these skills in action through my live applications</p>
-                
-                <div class="skills-container">
-                    <!-- Core Technical -->
-
-                    <div class="skill-category">
-                        <h3>Core Technical</h3>
-                        <div class="skill-list">
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <span>Python</span>
-                                    <span>85%</span>
-                                    
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="85%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <span>SQL</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="90%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <span>Power BI</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="90%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <span>Data Quality Management</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="85%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- AI & ML -->
-                    <div class="skill-category">
-                        <h3>AI & Machine Learning</h3>
-                        <div class="skill-list">
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <span>Prompt Engineering</span>
-                                    <span>95%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="95%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <span>LangChain & RAG</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="85%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <span>API Integration</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="85%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <span>Machine Learning</span>
-                                    <span>75%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-width="75%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Keep other skill categories... -->
-                </div>
-            </div>
-        </section>
-        
-        <!-- About Section Enhanced -->
-        <section id="about">
-            <div class="container">
-                <h2 class="section-heading">About Me</h2>
-                <div class="about">
-                    <div class="about-img">
-                        <img src="img/User.jpg" alt="Swanand Potnis">
-                        <div class="availability-badge">
-                            <span class="pulse"></span>
-                            Available for Projects
-                        </div>
-                    </div>
-                    <div class="about-content">
-                        <h2>Hi, I'm Swanand</h2>
-                        <p>I'm an Data Analyst and AI Developer with a proven track record of building production-ready applications that solve real business problems. My journey evolved from financial analytics to creating AI-powered solutions that are currently being used by hundreds of users.</p>
-                        
-                        <div class="about-highlights">
-                            <div class="highlight-item">
-                                <svg width="20" height="20" fill="currentColor"><path d="M9 11H3a1 1 0 010-2h6a1 1 0 010 2zm0-4H3a1 1 0 010-2h6a1 1 0 010 2zm0 8H3a1 1 0 010-2h6a1 1 0 010 2zm12-8h-6a1 1 0 010-2h6a1 1 0 010 2zm0 4h-6a1 1 0 010-2h6a1 1 0 010 2zm0 4h-6a1 1 0 010-2h6a1 1 0 010 2z"/></svg>
-                                <span><strong>3 Live Applications</strong> in production with active users</span>
-                            </div>
-                            <div class="highlight-item">
-                                <svg width="20" height="20" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                                <span><strong>15+ Projects</strong> delivered for data analysis & AI</span>
-                            </div>
-                            <div class="highlight-item">
-                                <svg width="20" height="20" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                                <span><strong>Freelance Consultant</strong> helping businesses automate</span>
-                            </div>
-                        </div>
-                        
-                        <p>My approach combines deep technical expertise with business acumen to create solutions that not only work but deliver measurable impact. Whether it's reducing documentation time by 90% or analyzing millions of data points in seconds, I focus on outcomes that matter.</p>
-                        
-                        <div class="cta-group">
-                            <a href="resume.pdf" download class="btn btn-primary">Download Resume</a>
-                            <a href="#contact" class="btn btn-outline">Let's Talk</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section Enhanced -->
-        <section id="contact">
-            <div class="container">
-                <h2 class="section-heading">Let's Build Something Together</h2>
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h2>Ready to transform your data challenges?</h2>
-                        <p>I'm currently accepting new projects and job opportunities. Whether you need a custom AI solution, data analysis, or process automation, let's discuss how I can help.</p>
-                        <div class="availability-info">
-                            <div class="availability-item">
-                                <svg width="20" height="20" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                                <span>Open to full-time opportunities</span>
-                            </div>
-                            <div class="availability-item">
-                                <svg width="20" height="20" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                                <span>Available for freelance projects</span>
-                            </div>
-                            <div class="availability-item">
-                                <svg width="20" height="20" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                                <span>Remote & on-site consultation</span>
-                            </div>
-                        </div>
-
-                        <div class="contact-details">
-                            
-                            <div class="contact-item">
-                                <svg width="20" height="20" fill="currentColor">
-                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                </svg>
-                                <span>India</span>
-                            </div>
-                        </div>
-
-                        <div class="social-links">
-                            <a href="https://github.com/Swanand33" target="_blank" class="social-link">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                GitHub
-                            </a>
-                            <a href="https://www.linkedin.com/in/swanandpotnis/" target="_blank" class="social-link">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                                </svg>
-                                LinkedIn
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="contact-form">
-                        <h3>Send me a message</h3>
-                        <!-- Netlify Form Setup -->
-                        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success">
-                            <!-- Hidden input to make Netlify detect the form -->
-                            <input type="hidden" name="form-name" value="contact" />
-
-                            <!-- Honeypot field for spam protection -->
-                            <p hidden>
-                              <label>Don't fill this out: <input name="bot-field" /></label>
-                            </p>
-
-                            <!-- Name -->
-                            <div class="form-group">
-                              <label for="name">Name</label>
-                              <input type="text" id="name" name="name" required>
-                            </div>
-
-                            <!-- Email -->
-                            <div class="form-group">
-                              <label for="email">Email</label>
-                              <input type="email" id="email" name="email" required>
-                            </div>
-
-                            <!-- Subject -->
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" id="subject" name="subject" required>
-                            </div>
-
-                            <!-- Message -->
-                            <div class="form-group">
-                              <label for="message">Message</label>
-                              <textarea id="message" name="message" required placeholder="Tell me about your project..."></textarea>
-                            </div>
-
-                            <!-- Submit Button -->
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                          </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Footer -->
-    <footer>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-glow"></div>
         <div class="container">
-            <div class="social-links">
-                <a href="https://github.com/Swanand33" target="_blank" class="social-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                    GitHub
-                </a>
-                <a href="https://www.linkedin.com/in/swanandpotnis/" target="_blank" class="social-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                    LinkedIn
-                </a>
-                <a href="https://medium.com/@SwanandPotnis" target="_blank" class="social-link">
-                    <svg width="20" height="20" viewBox="0 0 1043.63 592.71" fill="currentColor">
-                        <path d="M588.67 296.35L1043.63 0H0v592.71h1043.63L588.67 296.35z"/>                    </svg>
-                    Medium
-                </a>
-
-                </a>
+            <div class="hero-content fade-up">
+                <div class="hero-avail">
+                    <span class="pulse-dot"></span>
+                    Open to full-time roles & freelance
+                </div>
+                <h1>I build AI tools<br>that <span class="accent-text">work in production.</span></h1>
+                <p class="hero-typing">
+                    <span id="typingEffect" class="typing-text"></span><span class="cursor">|</span>
+                </p>
+                <p class="hero-desc">Data Analyst & AI Developer turning messy problems into clean solutions. From data pipelines to deployed LLM apps — I build things that actually ship.</p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="stat-num" data-target="3">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Live Apps</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="stat-num" data-target="15">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="stat-num" data-target="1">0</span>
+                        <span class="stat-label">OSS Library</span>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a href="#apps" class="btn btn-primary">View My Work</a>
+                    <a href="https://github.com/Swanand33" target="_blank" class="btn btn-ghost">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        GitHub
+                    </a>
+                </div>
             </div>
-            <p>&copy; 2025 Swanand Potnis. Built with passion for Data & AI.</p>
-            <p></p>
+        </div>
+    </section>
+
+    <!-- llm-behave SECTION -->
+    <section class="oss-section" id="llm-behave">
+        <div class="container">
+            <div class="oss-inner fade-up">
+                <div class="oss-content">
+                    <div class="oss-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        Open Source Library
+                    </div>
+                    <h2 class="oss-title">llm-behave</h2>
+                    <p class="oss-tagline">pytest plugin for behavioral testing of LLM applications</p>
+                    <p class="oss-desc">Stop using LLMs to judge LLMs. <strong>llm-behave</strong> brings semantic assertions, tone detection, and drift detection to your CI pipeline — all with an offline 80MB model. No API costs. No circular dependencies.</p>
+                    <ul class="oss-features">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Semantic matching — <code>response.mentions("refund")</code> understands meaning, not just strings
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Tone & intent detection — <code>response.tone("professional")</code> without an LLM judge
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Drift detection for CI — catch behavioral regressions before they hit production
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            100% offline — sentence-transformer runs on CPU, ~32ms per assertion
+                        </li>
+                    </ul>
+                    <div class="oss-actions">
+                        <a href="https://github.com/Swanand33/llm-behave" target="_blank" class="btn btn-primary">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            View on GitHub
+                        </a>
+                        <a href="https://github.com/Swanand33/llm-behave#readme" target="_blank" class="btn btn-ghost">Read Docs ↗</a>
+                    </div>
+                </div>
+                <div class="oss-terminal">
+                    <div class="terminal-bar">
+                        <div class="terminal-dots">
+                            <span class="tdot red"></span>
+                            <span class="tdot yellow"></span>
+                            <span class="tdot green"></span>
+                        </div>
+                        <span class="terminal-title">test_support.py</span>
+                    </div>
+                    <pre class="terminal-body"><code><span class="tc-comment"># Install the library</span>
+<span class="tc-cmd">$</span> pip install llm-behave<span class="tc-accent">[semantic]</span>
+
+<span class="tc-comment"># Write semantic tests, not string matchers</span>
+<span class="tc-kw">def</span> <span class="tc-fn">test_support_response</span>(llm):
+    response <span class="tc-op">=</span> llm.ask(
+        <span class="tc-str">"How do I get a refund?"</span>
+    )
+
+    <span class="tc-comment"># Understands meaning, not just words</span>
+    <span class="tc-kw">assert</span> response.<span class="tc-fn">mentions</span>(<span class="tc-str">"refund policy"</span>)
+    <span class="tc-kw">assert</span> response.<span class="tc-fn">tone</span>(<span class="tc-str">"professional"</span>)
+    <span class="tc-kw">assert</span> response.<span class="tc-fn">intent</span>(<span class="tc-str">"helpful"</span>)
+
+<span class="tc-comment"># Detect drift across model updates</span>
+<span class="tc-kw">def</span> <span class="tc-fn">test_no_regression</span>(drift):
+    drift.<span class="tc-fn">assert_consistent</span>(baseline<span class="tc-op">=</span><span class="tc-str">"v1.json"</span>)</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTION APPS -->
+    <section class="section" id="apps">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-label">In Production</span>
+                <h2>Live Applications</h2>
+                <p>Real tools solving real problems. Try them.</p>
+            </div>
+            <div class="apps-grid">
+
+                <div class="app-card featured fade-up">
+                    <div class="app-top">
+                        <div class="app-badges">
+                            <span class="badge-live">LIVE</span>
+                        </div>
+                        <span class="app-usage">100+ API docs generated</span>
+                    </div>
+                    <div class="app-img-wrap">
+                        <img src="img/docgen-screenshot.png" alt="DocGen Pro Interface" loading="lazy">
+                        <div class="app-img-overlay">
+                            <a href="https://docgen.up.railway.app/" target="_blank" class="btn btn-primary btn-sm">Try Live Demo →</a>
+                        </div>
+                    </div>
+                    <div class="app-body">
+                        <h3>DocGen Pro</h3>
+                        <p>Transform OpenAPI specs into beautiful documentation in seconds. 90% faster than writing docs by hand.</p>
+                        <div class="tech-row">
+                            <span>React</span><span>Node.js</span><span>OpenAPI</span>
+                        </div>
+                        <div class="app-links-row">
+                            <a href="https://docgen.up.railway.app/" target="_blank" class="btn btn-primary btn-sm">Launch App ↗</a>
+                            <a href="https://github.com/Swanand33/docgen-pro" target="_blank" class="btn btn-ghost btn-sm">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="app-card fade-up" style="--delay: 0.1s">
+                    <div class="app-top">
+                        <div class="app-badges">
+                            <span class="badge-live">LIVE</span>
+                        </div>
+                        <span class="app-usage">700+ datasets analyzed</span>
+                    </div>
+                    <div class="app-img-wrap">
+                        <img src="img/mdqd-screenshot.png" alt="Data Quality Detective" loading="lazy">
+                        <div class="app-img-overlay">
+                            <a href="https://mdqd.vercel.app/" target="_blank" class="btn btn-primary btn-sm">Try Live Demo →</a>
+                        </div>
+                    </div>
+                    <div class="app-body">
+                        <h3>Data Quality Detective</h3>
+                        <p>Upload a CSV, get instant AI-powered data quality scoring and actionable insights.</p>
+                        <div class="tech-row">
+                            <span>Python</span><span>Streamlit</span><span>Pandas</span>
+                        </div>
+                        <div class="app-links-row">
+                            <a href="https://mdqd.vercel.app/" target="_blank" class="btn btn-primary btn-sm">Launch App ↗</a>
+                            <a href="https://github.com/Swanand33/MDQD" target="_blank" class="btn btn-ghost btn-sm">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="app-card fade-up" style="--delay: 0.2s">
+                    <div class="app-top">
+                        <div class="app-badges">
+                            <span class="badge-beta">BETA</span>
+                        </div>
+                        <span class="app-usage">AI-Curated News</span>
+                    </div>
+                    <div class="app-img-wrap">
+                        <img src="img/clearfeed-screenshot.png" alt="ClearFeed News" loading="lazy">
+                        <div class="app-img-overlay">
+                            <a href="https://clearfeed.vercel.app/" target="_blank" class="btn btn-primary btn-sm">Try Beta →</a>
+                        </div>
+                    </div>
+                    <div class="app-body">
+                        <h3>ClearFeed</h3>
+                        <p>AI-curated news aggregation with smart categorization, real-time updates, and consensus ratings.</p>
+                        <div class="tech-row">
+                            <span>Next.js</span><span>AI/ML</span><span>APIs</span>
+                        </div>
+                        <div class="app-links-row">
+                            <a href="https://clearfeed.vercel.app/" target="_blank" class="btn btn-primary btn-sm">Try Beta ↗</a>
+                            <a href="https://github.com/Swanand33/clearfeed" target="_blank" class="btn btn-ghost btn-sm">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-label">Work</span>
+                <h2>Projects & Case Studies</h2>
+                <p>Analysis, AI implementations, and technical deep-dives.</p>
+            </div>
+            <div class="filter-row fade-up">
+                <button class="filter-pill active" data-filter="all">All</button>
+                <button class="filter-pill" data-filter="ai">AI / ML</button>
+                <button class="filter-pill" data-filter="data">Data Analysis</button>
+                <button class="filter-pill" data-filter="sql">SQL</button>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+
+                <div class="proj-card fade-up" data-tags="ai python">
+                    <div class="proj-img-wrap">
+                        <img src="img/AI Bill Shock.png" alt="AI Bill Shock Detector" loading="lazy">
+                        <span class="proj-impact">90% Accuracy</span>
+                    </div>
+                    <div class="proj-body">
+                        <h4>AI Bill Shock Detector</h4>
+                        <p>ML anomaly detection system for unexpected billing events. Real-time alerts preventing revenue loss.</p>
+                        <div class="proj-tags"><span>Python</span><span>Scikit-Learn</span><span>Streamlit</span></div>
+                        <a href="https://github.com/Swanand33/AI-bill-shock-analyzer" target="_blank" class="proj-link">View on GitHub ↗</a>
+                    </div>
+                </div>
+
+                <div class="proj-card fade-up" data-tags="ai python" style="--delay: 0.05s">
+                    <div class="proj-img-wrap">
+                        <img src="img/Screenshot 2025-07-22 115206.png" alt="Chat Assistant RAG" loading="lazy">
+                        <span class="proj-impact">Enterprise RAG</span>
+                    </div>
+                    <div class="proj-body">
+                        <h4>Chat Assistant – RAG</h4>
+                        <p>Private RAG implementation with PDF ingestion. 100% data privacy with instant knowledge retrieval.</p>
+                        <div class="proj-tags"><span>LangChain</span><span>OpenAI</span><span>FAISS</span></div>
+                        <a href="https://github.com/Swanand33/Chat-Assistant---RAG-" target="_blank" class="proj-link">View on GitHub ↗</a>
+                    </div>
+                </div>
+
+                <div class="proj-card fade-up" data-tags="ai python" style="--delay: 0.1s">
+                    <div class="proj-img-wrap">
+                        <img src="img/Screenshot 2025-07-19 144706.png" alt="InsightIQ" loading="lazy">
+                        <span class="proj-impact">10x Faster</span>
+                    </div>
+                    <div class="proj-body">
+                        <h4>InsightIQ</h4>
+                        <p>Upload CSV/Excel, get GPT-4 powered business insights and automated reports instantly.</p>
+                        <div class="proj-tags"><span>Python</span><span>Gradio</span><span>GPT-4</span></div>
+                        <a href="https://github.com/Swanand33/Insight.IQ" target="_blank" class="proj-link">View on GitHub ↗</a>
+                    </div>
+                </div>
+
+                <div class="proj-card fade-up" data-tags="ai python" style="--delay: 0.15s">
+                    <div class="proj-img-wrap proj-placeholder">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.4"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                        <span class="proj-impact">Multi-Agent</span>
+                    </div>
+                    <div class="proj-body">
+                        <h4>Accessible AI Agents</h4>
+                        <p>Multi-agent AI system for automated digital accessibility checks and content remediation.</p>
+                        <div class="proj-tags"><span>Python</span><span>Agents</span><span>Automation</span></div>
+                        <a href="https://github.com/Swanand33/accessible-ai-agents" target="_blank" class="proj-link">View on GitHub ↗</a>
+                    </div>
+                </div>
+
+                <div class="proj-card fade-up" data-tags="ai python" style="--delay: 0.2s">
+                    <div class="proj-img-wrap">
+                        <img src="img/PEP.jpg" alt="Prompt Engineering Playground" loading="lazy">
+                    </div>
+                    <div class="proj-body">
+                        <h4>Prompt Engineering Playground</h4>
+                        <p>Comprehensive demos of CoT, few-shot, RAG, and agent prompting techniques with benchmarks.</p>
+                        <div class="proj-tags"><span>Python</span><span>OpenAI</span><span>Jupyter</span></div>
+                        <a href="https://github.com/Swanand33/prompt-engineering-playground" target="_blank" class="proj-link">View on GitHub ↗</a>
+                    </div>
+                </div>
+
+                <div class="proj-card fade-up" data-tags="ai" style="--delay: 0.25s">
+                    <div class="proj-img-wrap">
+                        <img src="img/businessinsights_img.jpg" alt="Business Insights Chatbot" loading="lazy">
+                    </div>
+                    <div class="proj-body">
+                        <h4>Business Insights Chatbot</h4>
+                        <p>Fully customizable AI chatbot using Hugging Face models — no OpenAI dependency required.</p>
+                        <div class="proj-tags"><span>JavaScript</span><span>HuggingFace</span><span>API</span></div>
+                        <a href="https://github.com/Swanand33/Business-Insights-Chatbot" target="_blank" class="proj-link">View on GitHub ↗</a>
+                    </div>
+                </div>
+
+                <div class="proj-card fade-up" data-tags="data sql" style="--delay: 0s">
+                    <div class="proj-img-wrap">
+                        <img src="img/WallmartSS.png" alt="Walmart Sales Analysis" loading="lazy">
+                        <span class="proj-impact">$2M Insights</span>
+                    </div>
+                    <div class="proj-body">
+                        <h4>Walmart Sales Analysis</h4>
+                        <p>Comprehensive sales data analysis identifying $2M in optimization opportunities with predictive modeling.</p>
+                        <div class="proj-tags"><span>Python</span><span>PostgreSQL</span><span>Excel</span></div>
+                        <a href="https://github.com/Swanand33/Walmart-Sales-analysis" target="_blank" class="proj-link">View on GitHub ↗</a>
+                    </div>
+                </div>
+
+                <div class="proj-card fade-up" data-tags="data python" style="--delay: 0.05s">
+                    <div class="proj-img-wrap">
+                        <img src="img/Fin.Complaints.jpg" alt="Financial Consumer Complaints" loading="lazy">
+                        <span class="proj-impact">50K+ Records</span>
+                    </div>
+                    <div class="proj-body">
+                        <h4>Financial Consumer Complaints</h4>
+                        <p>EDA on 50K+ complaint records. Identified top categories driving regulatory action and process fixes.</p>
+                        <div class="proj-tags"><span>Python</span><span>Pandas</span><span>Power BI</span></div>
+                        <a href="https://github.com/Swanand33/Consumer-Complaints-EDA" target="_blank" class="proj-link">View on GitHub ↗</a>
+                    </div>
+                </div>
+
+                <div class="proj-card fade-up" data-tags="data" style="--delay: 0.1s">
+                    <div class="proj-img-wrap">
+                        <img src="img/Std. Ana2.png" alt="Student Data Analysis" loading="lazy">
+                    </div>
+                    <div class="proj-body">
+                        <h4>Student Data Analysis</h4>
+                        <p>Power BI dashboard analyzing student performance, income distribution, and programming experience trends.</p>
+                        <div class="proj-tags"><span>Power BI</span><span>DAX</span><span>Excel</span></div>
+                        <a href="https://github.com/Swanand33/Student-Data-Analysis-Dashboard" target="_blank" class="proj-link">View on GitHub ↗</a>
+                    </div>
+                </div>
+
+                <div class="proj-card fade-up" data-tags="data python" style="--delay: 0.15s">
+                    <div class="proj-img-wrap">
+                        <img src="img/LCT.jpg" alt="Low Carbon Technology" loading="lazy">
+                    </div>
+                    <div class="proj-body">
+                        <h4>Low Carbon Technology Trade</h4>
+                        <p>EDA of global low-carbon tech trade data (1994–2023) tracking sustainability trends and market shifts.</p>
+                        <div class="proj-tags"><span>Python</span><span>Matplotlib</span><span>Pandas</span></div>
+                        <a href="https://github.com/Swanand33/LowCarbonTrade-EDA" target="_blank" class="proj-link">View on GitHub ↗</a>
+                    </div>
+                </div>
+
+                <div class="proj-card fade-up" data-tags="data sql" style="--delay: 0.2s">
+                    <div class="proj-img-wrap">
+                        <img src="img/motorcycle.jpg" alt="Motorcycle Parts Sales" loading="lazy">
+                    </div>
+                    <div class="proj-body">
+                        <h4>Motorcycle Parts Sales</h4>
+                        <p>SQL-driven analysis to optimize inventory, boost revenue, and improve customer retention strategies.</p>
+                        <div class="proj-tags"><span>MySQL</span><span>Excel</span><span>SQL</span></div>
+                        <a href="https://github.com/Swanand33/Motorcycle-Parts-Sales" target="_blank" class="proj-link">View on GitHub ↗</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-label">Toolkit</span>
+                <h2>Skills & Stack</h2>
+                <p>Tools I use to get things done.</p>
+            </div>
+
+            <!-- Certification Badge -->
+            <div class="cert-row fade-up">
+                <div class="cert-badge">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                    <div class="cert-text">
+                        <span class="cert-name">Databricks Generative AI Fundamentals</span>
+                        <span class="cert-year">Certified 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-grid fade-up">
+
+                <div class="skill-group">
+                    <h4>Languages</h4>
+                    <div class="skill-icons">
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" loading="lazy">
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="SQL" loading="lazy">
+                            <span>SQL</span>
+                        </div>
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy">
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" alt="NumPy" loading="lazy">
+                            <span>NumPy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h4>AI & LLMs</h4>
+                    <div class="skill-icons">
+                        <div class="skill-icon skill-text-icon">
+                            <span class="icon-pill">LC</span>
+                            <span>LangChain</span>
+                        </div>
+                        <div class="skill-icon skill-text-icon">
+                            <span class="icon-pill">OAI</span>
+                            <span>OpenAI</span>
+                        </div>
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" alt="Scikit-Learn" loading="lazy">
+                            <span>Scikit-Learn</span>
+                        </div>
+                        <div class="skill-icon skill-text-icon">
+                            <span class="icon-pill">HF</span>
+                            <span>HuggingFace</span>
+                        </div>
+                        <div class="skill-icon skill-text-icon">
+                            <span class="icon-pill">RAG</span>
+                            <span>RAG / FAISS</span>
+                        </div>
+                        <div class="skill-icon skill-text-icon">
+                            <span class="icon-pill">PE</span>
+                            <span>Prompt Eng.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h4>Data & Analytics</h4>
+                    <div class="skill-icons">
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" alt="Pandas" loading="lazy">
+                            <span>Pandas</span>
+                        </div>
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" alt="Matplotlib" loading="lazy">
+                            <span>Matplotlib</span>
+                        </div>
+                        <div class="skill-icon skill-text-icon">
+                            <span class="icon-pill">PBI</span>
+                            <span>Power BI</span>
+                        </div>
+                        <div class="skill-icon skill-text-icon">
+                            <span class="icon-pill">TAB</span>
+                            <span>Tableau</span>
+                        </div>
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original-wordmark.svg" alt="Jupyter" loading="lazy">
+                            <span>Jupyter</span>
+                        </div>
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachespark/apachespark-original.svg" alt="Spark" loading="lazy">
+                            <span>Spark</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h4>Web & Infra</h4>
+                    <div class="skill-icons">
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" loading="lazy">
+                            <span>React</span>
+                        </div>
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="Next.js" loading="lazy">
+                            <span>Next.js</span>
+                        </div>
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" alt="FastAPI" loading="lazy">
+                            <span>FastAPI</span>
+                        </div>
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" alt="Flask" loading="lazy">
+                            <span>Flask</span>
+                        </div>
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker" loading="lazy">
+                            <span>Docker</span>
+                        </div>
+                        <div class="skill-icon skill-text-icon">
+                            <span class="icon-pill">SL</span>
+                            <span>Streamlit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h4>Cloud & Databases</h4>
+                    <div class="skill-icons">
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS" loading="lazy">
+                            <span>AWS</span>
+                        </div>
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" alt="Azure" loading="lazy">
+                            <span>Azure</span>
+                        </div>
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" alt="GCP" loading="lazy">
+                            <span>GCP</span>
+                        </div>
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL" loading="lazy">
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill-icon skill-text-icon">
+                            <span class="icon-pill">SF</span>
+                            <span>Snowflake</span>
+                        </div>
+                        <div class="skill-icon skill-text-icon">
+                            <span class="icon-pill">BQ</span>
+                            <span>BigQuery</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about-inner fade-up">
+                <div class="about-img-col">
+                    <div class="about-img-wrap">
+                        <img src="img/User.jpg" alt="Swanand Potnis" loading="lazy">
+                    </div>
+                    <div class="about-avail">
+                        <span class="pulse-dot"></span>
+                        Available for projects
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-label">About</span>
+                    <h2>Hi, I'm Swanand.</h2>
+                    <p>I'm a Data Analyst and AI Developer based in India. My work sits at the intersection of data engineering and applied AI — I build tools that go from prototype to production, not just notebooks that sit on GitHub.</p>
+                    <p>I started in financial analytics and moved into AI-powered solutions. Today I maintain <strong>llm-behave</strong> (an open source testing library for LLM apps), run 3 production applications with real users, and help businesses automate their data workflows.</p>
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Databricks Generative AI Certified (2024)</span>
+                        </div>
+                        <div class="highlight">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>3 live applications with active users</span>
+                        </div>
+                        <div class="highlight">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Open source library author</span>
+                        </div>
+                        <div class="highlight">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Actively seeking full-time roles & open to freelance</span>
+                        </div>
+                    </div>
+                    <div class="about-actions">
+                        <a href="resume.pdf" download class="btn btn-primary">Download Resume</a>
+                        <a href="#contact" class="btn btn-ghost">Let's Talk</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="contact-inner">
+                <div class="contact-info fade-up">
+                    <span class="section-label">Contact</span>
+                    <h2>Let's build something.</h2>
+                    <p>Actively looking for full-time roles in data analytics and AI. Also open to freelance projects and interesting collaborations — data analysis, AI solutions, process automation.</p>
+                    <div class="contact-details">
+                        <div class="contact-row">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>India — Remote worldwide</span>
+                        </div>
+                        <div class="contact-row">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Actively seeking full-time roles</span>
+                        </div>
+                        <div class="contact-row">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Also available for freelance projects</span>
+                        </div>
+                    </div>
+                    <div class="social-row">
+                        <a href="https://github.com/Swanand33" target="_blank" class="social-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/swanandpotnis/" target="_blank" class="social-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            LinkedIn
+                        </a>
+                        <a href="https://medium.com/@SwanandPotnis" target="_blank" class="social-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+                            Medium
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrap fade-up" style="--delay: 0.15s">
+                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success" id="contactForm">
+                        <input type="hidden" name="form-name" value="contact">
+                        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span class="footer-name">Swanand Potnis</span>
+            <span class="footer-copy">Built with care. Deployed on Netlify.</span>
+            <div class="footer-links">
+                <a href="https://github.com/Swanand33" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/swanandpotnis/" target="_blank">LinkedIn</a>
+                <a href="https://medium.com/@SwanandPotnis" target="_blank">Medium</a>
+            </div>
         </div>
     </footer>
+
+    <!-- Back to top -->
+    <button class="back-top" id="backTop" aria-label="Back to top">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
 
     <script src="script.js"></script>
 </body>
