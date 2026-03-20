@@ -32,6 +32,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 72px;
+    overflow-x: hidden;
 }
 
 body {
@@ -41,6 +42,7 @@ body {
     line-height: 1.6;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
 img { display: block; max-width: 100%; height: auto; }
@@ -391,6 +393,7 @@ code { font-family: var(--font-mono); }
     background: linear-gradient(180deg, transparent 0%, rgba(139, 92, 246, 0.04) 50%, transparent 100%);
     border-top: 1px solid var(--border-soft);
     border-bottom: 1px solid var(--border-soft);
+    overflow: hidden;
 }
 
 .oss-inner {
@@ -498,12 +501,14 @@ code { font-family: var(--font-mono); }
 .terminal-body {
     padding: 24px;
     overflow-x: auto;
+    max-width: 100%;
 }
 .terminal-body code {
     font-size: 0.82rem;
     line-height: 1.8;
     display: block;
     white-space: pre;
+    max-width: 100%;
 }
 
 /* Token colors */
@@ -1114,6 +1119,7 @@ code { font-family: var(--font-mono); }
 /* — Tablet landscape (≤ 960px) — */
 @media (max-width: 960px) {
     .container { padding: 0 20px; }
+    .oss-terminal { display: none; }
 
     .section { padding: 80px 0; }
     .oss-section { padding: 64px 0; }
@@ -1168,6 +1174,8 @@ code { font-family: var(--font-mono); }
     .skills-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
     .skill-group { padding: 22px 18px; }
 
+    .oss-features li { flex-wrap: wrap; gap: 6px; }
+    .oss-features code { word-break: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block; }
     .about-inner { gap: 32px; }
     .contact-inner { gap: 36px; }
     .contact-form-wrap { padding: 28px 24px; }
@@ -1210,6 +1218,9 @@ code { font-family: var(--font-mono); }
     .cert-row { padding: 0; }
 
     .oss-title { font-size: 2rem; }
+    .oss-tagline { word-break: break-word; overflow-wrap: break-word; }
+    .oss-features li { flex-wrap: wrap; gap: 6px; }
+    .oss-features code { word-break: break-word; overflow-wrap: break-word; max-width: 100%; display: inline-block; }
     .oss-actions { flex-direction: column; }
     .oss-actions .btn { width: 100%; justify-content: center; }
 
