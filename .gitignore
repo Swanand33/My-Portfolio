@@ -1,3 +1,10 @@
 old/
 .vscode/
 node_modules/
+
+# personal/reference files
+CLAUDE.md
+gstapp.txt
+llm-rg.txt
+image.png
+Swanand_Potnis_Complete_Profile.md

@@ -134,6 +134,53 @@ document.getElementById('backTop').addEventListener('click', () => {
 });
 
 /* ===========================
+   3D CARD TILT
+=========================== */
+const tiltCards = document.querySelectorAll('.app-card, .proj-card');
+
+tiltCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.style.transition = 'transform 0.08s ease, border-color 0.2s ease, box-shadow 0.2s ease';
+    });
+
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        card.style.transform = `perspective(900px) rotateX(${-y * 6}deg) rotateY(${x * 7}deg) translateY(-4px)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), border-color 0.2s ease, box-shadow 0.2s ease';
+        card.style.transform = '';
+    });
+});
+
+/* ===========================
+   HERO MOUSE-FOLLOW GLOW
+=========================== */
+const heroGlow = document.querySelector('.hero-bg-glow');
+const heroEl   = document.querySelector('.hero');
+
+if (heroGlow && heroEl) {
+    let rafId;
+    heroEl.addEventListener('mousemove', (e) => {
+        cancelAnimationFrame(rafId);
+        rafId = requestAnimationFrame(() => {
+            const rect = heroEl.getBoundingClientRect();
+            const cx = rect.width  / 2;
+            const cy = rect.height / 2;
+            const dx = (e.clientX - rect.left - cx) * 0.06;
+            const dy = (e.clientY - rect.top  - cy) * 0.06;
+            heroGlow.style.transform = `translateX(calc(-50% + ${dx}px)) translateY(${dy}px)`;
+        });
+    });
+    heroEl.addEventListener('mouseleave', () => {
+        heroGlow.style.transform = 'translateX(-50%)';
+    });
+}
+
+/* ===========================
    CONTACT FORM (client-side validation)
    Netlify handles actual submission
 =========================== */
