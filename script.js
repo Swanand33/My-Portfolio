@@ -37,11 +37,11 @@ document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
    TYPING EFFECT
 =========================== */
 const phrases = [
-    'Data Analyst',
-    'AI Developer',
-    'Prompt Engineer',
+    'AI Engineer',
+    'Data Engineer',
     'Open Source Author',
-    'Python Developer',
+    'Backend Developer',
+    'Prompt Engineer',
 ];
 
 const typingEl = document.getElementById('typingEffect');
