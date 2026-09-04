@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swanand Potnis — AI Engineer</title>
+    <meta name="description" content="AI Engineer building production AI systems. Creator of llm-behave, DocGrit, and mcp-llm-behave. Open to full-time roles, and selectively available for freelance AI/data consulting.">
+    <meta property="og:title" content="Swanand Potnis — AI Engineer">
+    <meta property="og:description" content="Building AI systems that work in production. Open source library author, 2 live apps, shipping code daily. Open to full-time roles and select consulting engagements.">
+    <meta property="og:url" content="https://swanand33.netlify.app">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+        <div class="container nav-inner">
+            <a href="#" class="nav-logo">swanand</a>
+            <div class="nav-links" id="navLinks">
+                <a href="#apps">Apps</a>
+                <a href="#llm-behave">llm-behave</a>
+                <a href="#projects">Projects</a>
+                <a href="#services">Services</a>
+                <a href="#skills">Skills</a>
+                <a href="#about">About</a>
+                <a href="https://medium.com/@SwanandPotnis" target="_blank">Blog</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <a href="https://github.com/Swanand33" target="_blank" class="nav-icon" aria-label="GitHub">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/swanandpotnis/" target="_blank" class="nav-icon" aria-label="LinkedIn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://medium.com/@SwanandPotnis" target="_blank" class="nav-icon" aria-label="Medium">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+                </a>
+                <button class="nav-menu" id="menuToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+        <div class="nav-mobile" id="navMobile">
+            <a href="#apps" class="mob-link">Apps</a>
+            <a href="#llm-behave" class="mob-link">llm-behave</a>
+            <a href="#projects" class="mob-link">Projects</a>
+            <a href="#services" class="mob-link">Services</a>
+            <a href="#skills" class="mob-link">Skills</a>
+            <a href="#about" class="mob-link">About</a>
+            <a href="https://medium.com/@SwanandPotnis" target="_blank" class="mob-link">Blog</a>
+            <a href="#contact" class="mob-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-glow"></div>
+        <div class="hero-scanlines"></div>
+        <div class="hero-grain"></div>
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content rise-in">
+                    <div class="status-line">
+                        <span class="pulse-dot"></span>
+                        <span class="status-key">status:</span>
+                        <span class="status-val">open to full-time AI engineering roles</span>
+                    </div>
+                    <h1>I build AI tools that work in production.</h1>
+                    <p class="hero-typing">
+                        <span id="typingEffect" class="typing-text"></span><span class="cursor">_</span>
+                    </p>
+                    <p class="hero-desc">From LLM pipelines to deployed APIs — I build things that actually ship, not notebooks that sit on GitHub. Currently prioritizing full-time roles, and selectively taking on freelance & consulting work in AI and data alongside.</p>
+                    <div class="hero-actions">
+                        <a href="#apps" class="btn btn-primary">View my work</a>
+                        <a href="https://github.com/Swanand33" target="_blank" class="btn btn-ghost">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="infer-panel rise-in" style="--delay: 0.15s">
+                    <div class="infer-head">
+                        <span class="pulse-dot"></span>
+                        live generation — hover a token
+                    </div>
+                    <div class="infer-body">
+                        <p class="infer-stream" id="inferStream" data-text="Ships production AI systems that handle real traffic, not just notebooks."></p>
+                        <div class="infer-meta">
+                            <div class="infer-row">
+                                <span class="infer-key">role</span>
+                                <span class="infer-val">AI Engineer</span>
+                            </div>
+                            <div class="infer-row">
+                                <span class="infer-key">apps_live</span>
+                                <span class="infer-val"><span class="stat-num" data-target="2">0</span></span>
+                            </div>
+                            <div class="infer-row">
+                                <span class="infer-key">oss_libs</span>
+                                <span class="infer-val"><span class="stat-num" data-target="1">0</span></span>
+                            </div>
+                            <div class="infer-row highlight">
+                                <span class="infer-key">availability</span>
+                                <span class="infer-val">full-time + consulting</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- llm-behave SECTION -->
+    <section class="oss-section" id="llm-behave">
+        <div class="container">
+            <div class="oss-inner">
+                <div class="oss-content">
+                    <span class="oss-label">open-source · pypi</span>
+                    <h2 class="oss-title">llm-behave</h2>
+                    <p class="oss-tagline">pytest plugin for behavioral testing of LLM applications</p>
+                    <p class="oss-desc">Stop using LLMs to judge LLMs. <strong>llm-behave</strong> brings semantic assertions, tone detection, and drift detection to your CI pipeline — all with an offline 80MB model. No API costs. No circular dependencies.</p>
+                    <ul class="oss-features">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Semantic matching — <code>response.mentions("refund")</code> understands meaning, not just strings
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Tone & intent detection — <code>response.tone("professional")</code> without an LLM judge
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Drift detection for CI — catch behavioral regressions before they hit production
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            100% offline — sentence-transformer runs on CPU, ~32ms per assertion
+                        </li>
+                    </ul>
+                    <div class="oss-actions">
+                        <a href="https://github.com/Swanand33/llm-behave" target="_blank" class="btn btn-primary">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            View on GitHub
+                        </a>
+                        <a href="https://github.com/Swanand33/llm-behave#readme" target="_blank" class="btn btn-ghost">Read docs</a>
+                    </div>
+                    <div class="drift-chart">
+                        <p>pass rate across model updates — string matching vs. llm-behave</p>
+                        <svg viewBox="0 0 320 110" preserveAspectRatio="none">
+                            <polyline points="10,26 68,52 126,50 184,68 242,88 300,94" fill="none" stroke="#FF6B57" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <polyline points="10,14 68,12 126,16 184,10 242,14 300,12" fill="none" stroke="#55D68A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <g fill="#55D68A"><circle cx="10" cy="14" r="2.5"/><circle cx="68" cy="12" r="2.5"/><circle cx="126" cy="16" r="2.5"/><circle cx="184" cy="10" r="2.5"/><circle cx="242" cy="14" r="2.5"/><circle cx="300" cy="12" r="2.5"/></g>
+                            <g fill="#FF6B57"><circle cx="10" cy="26" r="2.5"/><circle cx="68" cy="52" r="2.5"/><circle cx="126" cy="50" r="2.5"/><circle cx="184" cy="68" r="2.5"/><circle cx="242" cy="88" r="2.5"/><circle cx="300" cy="94" r="2.5"/></g>
+                        </svg>
+                        <div class="drift-legend">
+                            <span><i style="background:#55D68A"></i>llm-behave (semantic)</span>
+                            <span><i style="background:#FF6B57"></i>naive string match</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="code-panel">
+                    <div class="code-bar">test_support.py</div>
+                    <pre class="code-body"><code><span class="tc-comment"># Install the library</span>
+<span class="tc-cmd">$</span> pip install llm-behave<span class="tc-accent">[semantic]</span>
+
+<span class="tc-comment"># Write semantic tests, not string matchers</span>
+<span class="tc-kw">def</span> <span class="tc-fn">test_support_response</span>(llm):
+    response <span class="tc-op">=</span> llm.ask(
+        <span class="tc-str">"How do I get a refund?"</span>
+    )
+
+    <span class="tc-comment"># Understands meaning, not just words</span>
+    <span class="tc-kw">assert</span> response.<span class="tc-fn">mentions</span>(<span class="tc-str">"refund policy"</span>)
+    <span class="tc-kw">assert</span> response.<span class="tc-fn">tone</span>(<span class="tc-str">"professional"</span>)
+    <span class="tc-kw">assert</span> response.<span class="tc-fn">intent</span>(<span class="tc-str">"helpful"</span>)
+
+<span class="tc-comment"># Detect drift across model updates</span>
+<span class="tc-kw">def</span> <span class="tc-fn">test_no_regression</span>(drift):
+    drift.<span class="tc-fn">assert_consistent</span>(baseline<span class="tc-op">=</span><span class="tc-str">"v1.json"</span>)</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTION APPS -->
+    <section class="section" id="apps">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">in production</span>
+                <h2>Live applications</h2>
+                <p>Real tools solving real problems. Try them.</p>
+            </div>
+            <div class="apps-list">
+
+                <article class="app-row">
+                    <div class="app-row-media">
+                        <img src="img/docgen-screenshot.png" alt="DocGrit interface" loading="lazy">
+                    </div>
+                    <div class="app-row-body">
+                        <div class="app-row-meta">
+                            <div class="meta-cell">
+                                <span class="meta-key">status</span>
+                                <span class="meta-val meta-live"><span class="pulse-dot"></span>live</span>
+                            </div>
+                            <div class="meta-cell">
+                                <span class="meta-key">users</span>
+                                <span class="meta-val">30+</span>
+                            </div>
+                        </div>
+                        <h3>DocGrit</h3>
+                        <p>SaaS API documentation generator. Transform OpenAPI specs into beautiful, interactive docs in seconds.</p>
+                        <div class="app-row-stack">
+                            <span>Node.js/Express</span><span>Supabase</span><span>Google Gemini</span><span>Railway</span>
+                        </div>
+                        <div class="app-row-links">
+                            <a href="https://docgrit.com/" target="_blank" class="btn btn-primary btn-sm">Launch app</a>
+                            <a href="https://github.com/Swanand33/Doc-Gen" target="_blank" class="btn btn-ghost btn-sm">View code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="app-row">
+                    <div class="app-row-media">
+                        <img src="img/mdqd-screenshot.png" alt="Data Quality Detective interface" loading="lazy">
+                    </div>
+                    <div class="app-row-body">
+                        <div class="app-row-meta">
+                            <div class="meta-cell">
+                                <span class="meta-key">status</span>
+                                <span class="meta-val meta-live"><span class="pulse-dot"></span>live</span>
+                            </div>
+                            <div class="meta-cell">
+                                <span class="meta-key">focus</span>
+                                <span class="meta-val">data quality</span>
+                            </div>
+                        </div>
+                        <h3>Data Quality Detective</h3>
+                        <p>Upload a CSV, get instant AI-powered data quality scoring and actionable insights.</p>
+                        <div class="app-row-stack">
+                            <span>Python</span><span>Streamlit</span><span>Pandas</span>
+                        </div>
+                        <div class="app-row-links">
+                            <a href="https://mdqd.vercel.app/" target="_blank" class="btn btn-primary btn-sm">Launch app</a>
+                            <a href="https://github.com/Swanand33/MDQD" target="_blank" class="btn btn-ghost btn-sm">View code</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">work</span>
+                <h2>Projects & case studies</h2>
+                <p>AI implementations, open-source tools, and technical deep-dives.</p>
+            </div>
+            <div class="filter-row">
+                <button class="filter-pill active" data-filter="all">All</button>
+                <button class="filter-pill" data-filter="ai">AI / ML</button>
+            </div>
+            <div class="registry" id="projectsGrid">
+
+                <div class="proj-card" data-tags="ai python">
+                    <div class="registry-thumb">
+                        <img src="img/claw.png" alt="LLM Regression Monitor" loading="lazy">
+                    </div>
+                    <div class="registry-main">
+                        <div class="registry-top">
+                            <h4>LLM Regression Monitor</h4>
+                            <span class="registry-impact">Live on ClawHub</span>
+                        </div>
+                        <p>Automated behavioral testing & alerting for LLM apps. Catches prompt drift daily and alerts on Slack, Discord, WhatsApp, or email — before users notice.</p>
+                        <div class="registry-tags"><span>Python</span><span>llm-behave</span><span>OpenClaw</span><span>ClawHub</span></div>
+                    </div>
+                    <div class="registry-links">
+                        <a href="https://clawhub.ai/swanand33/llm-regression-monitor" target="_blank" class="proj-link">ClawHub</a>
+                        <a href="https://github.com/swanand33/llm-regression-monitor" target="_blank" class="proj-link">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="proj-card" data-tags="ai python">
+                    <div class="registry-thumb">
+                        <img src="img/AI Bill Shock.png" alt="AI Bill Shock Detector" loading="lazy">
+                    </div>
+                    <div class="registry-main">
+                        <div class="registry-top">
+                            <h4>AI Bill Shock Detector</h4>
+                            <span class="registry-impact">90% accuracy</span>
+                        </div>
+                        <p>ML anomaly detection system for unexpected billing events. Real-time alerts preventing revenue loss.</p>
+                        <div class="registry-tags"><span>Python</span><span>Scikit-Learn</span><span>Streamlit</span></div>
+                    </div>
+                    <div class="registry-links">
+                        <a href="https://github.com/Swanand33/AI-bill-shock-analyzer" target="_blank" class="proj-link">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="proj-card" data-tags="ai python">
+                    <div class="registry-thumb">
+                        <img src="img/Screenshot 2025-07-22 115206.png" alt="Chat Assistant RAG" loading="lazy">
+                    </div>
+                    <div class="registry-main">
+                        <div class="registry-top">
+                            <h4>Chat Assistant – RAG</h4>
+                            <span class="registry-impact">Enterprise RAG</span>
+                        </div>
+                        <p>Private RAG implementation with PDF ingestion. 100% data privacy with instant knowledge retrieval.</p>
+                        <div class="registry-tags"><span>LangChain</span><span>OpenAI</span><span>FAISS</span></div>
+                    </div>
+                    <div class="registry-links">
+                        <a href="https://github.com/Swanand33/Chat-Assistant---RAG-" target="_blank" class="proj-link">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="proj-card" data-tags="ai python">
+                    <div class="registry-thumb">
+                        <img src="img/Screenshot 2025-07-19 144706.png" alt="InsightIQ" loading="lazy">
+                    </div>
+                    <div class="registry-main">
+                        <div class="registry-top">
+                            <h4>InsightIQ</h4>
+                            <span class="registry-impact">10x faster</span>
+                        </div>
+                        <p>Upload CSV/Excel, get GPT-4 powered business insights and automated reports instantly.</p>
+                        <div class="registry-tags"><span>Python</span><span>Gradio</span><span>GPT-4</span></div>
+                    </div>
+                    <div class="registry-links">
+                        <a href="https://github.com/Swanand33/Insight.IQ" target="_blank" class="proj-link">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="proj-card" data-tags="ai python">
+                    <div class="registry-thumb proj-placeholder">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                    </div>
+                    <div class="registry-main">
+                        <div class="registry-top">
+                            <h4>Accessible AI Agents</h4>
+                            <span class="registry-impact">Multi-agent</span>
+                        </div>
+                        <p>Multi-agent AI system for automated digital accessibility checks and content remediation.</p>
+                        <div class="registry-tags"><span>Python</span><span>Agents</span><span>Automation</span></div>
+                    </div>
+                    <div class="registry-links">
+                        <a href="https://github.com/Swanand33/accessible-ai-agents" target="_blank" class="proj-link">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="proj-card" data-tags="ai python">
+                    <div class="registry-thumb">
+                        <img src="img/PEP.jpg" alt="Prompt Engineering Playground" loading="lazy">
+                    </div>
+                    <div class="registry-main">
+                        <div class="registry-top">
+                            <h4>Prompt Engineering Playground</h4>
+                            <span class="registry-impact">4 techniques benchmarked</span>
+                        </div>
+                        <p>Comprehensive demos of CoT, few-shot, RAG, and agent prompting techniques with benchmarks.</p>
+                        <div class="registry-tags"><span>Python</span><span>OpenAI</span><span>Jupyter</span></div>
+                    </div>
+                    <div class="registry-links">
+                        <a href="https://github.com/Swanand33/prompt-engineering-playground" target="_blank" class="proj-link">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="proj-card" data-tags="ai python">
+                    <div class="registry-thumb proj-placeholder">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"><path d="M4 17l6-6-6-6"/><path d="M12 19h8"/></svg>
+                    </div>
+                    <div class="registry-main">
+                        <div class="registry-top">
+                            <h4>mcp-llm-behave</h4>
+                            <span class="registry-impact">MCP server</span>
+                        </div>
+                        <p>MCP server wrapping llm-behave using FastMCP with stdio transport. Run behavioral LLM tests from any MCP-compatible client.</p>
+                        <div class="registry-tags"><span>Python</span><span>FastMCP</span><span>MCP</span><span>stdio</span></div>
+                    </div>
+                    <div class="registry-links">
+                        <a href="https://github.com/Swanand33/mcp-llm-behave" target="_blank" class="proj-link">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="proj-card" data-tags="ai">
+                    <div class="registry-thumb">
+                        <img src="img/clearfeed-screenshot.png" alt="ClearFeed News" loading="lazy">
+                    </div>
+                    <div class="registry-main">
+                        <div class="registry-top">
+                            <h4>ClearFeed</h4>
+                            <span class="registry-impact">Live demo</span>
+                        </div>
+                        <p>AI-curated news aggregation with smart categorization, real-time updates, and consensus ratings.</p>
+                        <div class="registry-tags"><span>Next.js</span><span>AI/ML</span><span>APIs</span></div>
+                    </div>
+                    <div class="registry-links">
+                        <a href="https://clearfeed-news.vercel.app/" target="_blank" class="proj-link">Live demo</a>
+                        <a href="https://github.com/Swanand33/clearfeed" target="_blank" class="proj-link">GitHub</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">work with me</span>
+                <h2>What I can help with</h2>
+                <p>Currently prioritizing full-time roles — open to select freelance and consulting engagements alongside.</p>
+            </div>
+            <div class="services-grid">
+
+                <div class="service-card">
+                    <h4>AI & LLM systems</h4>
+                    <p>RAG pipelines, LLM integrations, and agent workflows built to run in production — not one-off notebooks.</p>
+                    <div class="service-tags"><span>LangChain</span><span>RAG</span><span>OpenAI / Gemini</span><span>MCP</span></div>
+                </div>
+
+                <div class="service-card">
+                    <h4>AI testing & eval infrastructure</h4>
+                    <p>Behavioral testing, drift detection, and CI pipelines for LLM apps — the exact problem llm-behave was built to solve.</p>
+                    <div class="service-tags"><span>pytest</span><span>sentence-transformers</span><span>CI/CD</span></div>
+                </div>
+
+                <div class="service-card">
+                    <h4>Data & analytics</h4>
+                    <p>Data quality checks, anomaly detection, and automated reporting — from raw CSV to an answer someone can act on.</p>
+                    <div class="service-tags"><span>Pandas</span><span>Scikit-learn</span><span>Streamlit</span></div>
+                </div>
+
+                <div class="service-card">
+                    <h4>Technical advisory</h4>
+                    <p>Short-term consulting on AI architecture, tool selection, and getting an LLM feature from prototype to production.</p>
+                    <div class="service-tags"><span>Architecture review</span><span>Advisory</span></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header section-header-center">
+                <span class="section-eyebrow">// tech stack</span>
+                <h2>Technologies I Work With</h2>
+                <p>Full-stack expertise across LLM systems, applied AI, and production infrastructure.</p>
+            </div>
+
+            <div class="cert-row">
+                <div class="cert-ticket">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                    <div class="cert-text">
+                        <span class="cert-name">Databricks Generative AI Fundamentals</span>
+                        <span class="cert-year">certified 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-marquee">
+                <div class="marquee-row" data-dir="left">
+                    <div class="marquee-track">
+                        <span class="tag">LangChain</span>
+                        <span class="tag">OpenAI</span>
+                        <span class="tag">Google Gemini</span>
+                        <span class="tag">RAG / FAISS</span>
+                        <span class="tag">MCP / FastMCP</span>
+                        <span class="tag">sentence-transformers</span>
+                        <span class="tag">HuggingFace</span>
+                        <span class="tag">Scikit-Learn</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">NumPy</span>
+                        <span class="tag">FastAPI</span>
+                        <span class="tag" aria-hidden="true">LangChain</span>
+                        <span class="tag" aria-hidden="true">OpenAI</span>
+                        <span class="tag" aria-hidden="true">Google Gemini</span>
+                        <span class="tag" aria-hidden="true">RAG / FAISS</span>
+                        <span class="tag" aria-hidden="true">MCP / FastMCP</span>
+                        <span class="tag" aria-hidden="true">sentence-transformers</span>
+                        <span class="tag" aria-hidden="true">HuggingFace</span>
+                        <span class="tag" aria-hidden="true">Scikit-Learn</span>
+                        <span class="tag" aria-hidden="true">Python</span>
+                        <span class="tag" aria-hidden="true">SQL</span>
+                        <span class="tag" aria-hidden="true">JavaScript</span>
+                        <span class="tag" aria-hidden="true">NumPy</span>
+                        <span class="tag" aria-hidden="true">FastAPI</span>
+                    </div>
+                </div>
+                <div class="marquee-row" data-dir="right">
+                    <div class="marquee-track">
+                        <span class="tag">Flask</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Next.js</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Streamlit</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">Matplotlib</span>
+                        <span class="tag">Jupyter</span>
+                        <span class="tag">AWS</span>
+                        <span class="tag">GCP</span>
+                        <span class="tag">Supabase</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">Railway</span>
+                        <span class="tag" aria-hidden="true">Flask</span>
+                        <span class="tag" aria-hidden="true">React</span>
+                        <span class="tag" aria-hidden="true">Next.js</span>
+                        <span class="tag" aria-hidden="true">Docker</span>
+                        <span class="tag" aria-hidden="true">Streamlit</span>
+                        <span class="tag" aria-hidden="true">Pandas</span>
+                        <span class="tag" aria-hidden="true">Matplotlib</span>
+                        <span class="tag" aria-hidden="true">Jupyter</span>
+                        <span class="tag" aria-hidden="true">AWS</span>
+                        <span class="tag" aria-hidden="true">GCP</span>
+                        <span class="tag" aria-hidden="true">Supabase</span>
+                        <span class="tag" aria-hidden="true">MySQL</span>
+                        <span class="tag" aria-hidden="true">Railway</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about-inner">
+                <div class="about-img-col">
+                    <div class="about-img-wrap">
+                        <img src="img\User.png" alt="Swanand Potnis" loading="lazy">
+                    </div>
+                    <div class="status-line" style="margin-top:16px; margin-bottom:0;">
+                        <span class="pulse-dot"></span>
+                        <span class="status-val">available for projects</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-eyebrow">about</span>
+                    <h2>Hi, I'm Swanand.</h2>
+                    <p>I'm an AI Engineer based in India. I build production AI systems — from LLM integrations and RAG pipelines to testing infrastructure and deployed APIs. Not notebooks that sit on GitHub, but tools with real users.</p>
+                    <p>Today I maintain <strong>llm-behave</strong> (an open source testing library for LLM apps), run production applications with active users, and ship code daily. Background in data engineering and analytics. Alongside the full-time search, I take on select freelance and consulting work in AI and data.</p>
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Databricks Generative AI certified (2024)</span>
+                        </div>
+                        <div class="highlight">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>2 live applications with active users</span>
+                        </div>
+                        <div class="highlight">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Open source library author (PyPI)</span>
+                        </div>
+                        <div class="highlight">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Actively seeking full-time AI engineering roles</span>
+                        </div>
+                    </div>
+                    <div class="about-actions">
+                        <a href="#contact" class="btn btn-primary">Let's talk</a>
+                        <a href="mailto:workwithswanand@gmail.com?subject=Resume%20Request&body=Hi%20Swanand%2C%0D%0A%0D%0AI'd%20like%20to%20request%20your%20resume.%0D%0A%0D%0AContext%3A%20" class="btn btn-ghost">Request resume</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="contact-inner">
+                <div class="contact-info">
+                    <span class="section-eyebrow">contact</span>
+                    <h2>Let's build something.</h2>
+                    <p>Actively looking for full-time AI engineering roles. Also open to freelance projects and interesting collaborations — AI systems, LLM integrations, and production tooling.</p>
+                    <div class="contact-details">
+                        <div class="contact-row">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>India — remote worldwide</span>
+                        </div>
+                        <div class="contact-row">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Actively seeking full-time roles</span>
+                        </div>
+                        <div class="contact-row">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Also available for freelance projects</span>
+                        </div>
+                    </div>
+                    <div class="social-row">
+                        <a href="https://github.com/Swanand33" target="_blank" class="social-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/swanandpotnis/" target="_blank" class="social-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            LinkedIn
+                        </a>
+                        <a href="https://medium.com/@SwanandPotnis" target="_blank" class="social-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+                            Medium
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrap">
+                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success" id="contactForm">
+                        <input type="hidden" name="form-name" value="contact">
+                        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span class="footer-name">swanand potnis</span>
+            <span class="footer-copy">Built with care. Deployed on Netlify.</span>
+            <div class="footer-links">
+                <a href="https://github.com/Swanand33" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/swanandpotnis/" target="_blank">LinkedIn</a>
+                <a href="https://medium.com/@SwanandPotnis" target="_blank">Medium</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="back-top" id="backTop" aria-label="Back to top">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

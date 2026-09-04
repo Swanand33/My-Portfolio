@@ -20,18 +20,46 @@ navMobile.querySelectorAll('.mob-link').forEach(link => {
 });
 
 /* ===========================
-   FADE-UP ON SCROLL
+   TOKEN-CONFIDENCE STREAM
+   Deterministic per-word "model confidence" highlight,
+   like a logprob viewer — amber (confident) to coral (less so).
 =========================== */
-const fadeObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            fadeObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+function seededConfidence(word) {
+    let hash = 0;
+    for (let i = 0; i < word.length; i++) {
+        hash = (hash * 31 + word.charCodeAt(i)) >>> 0;
+    }
+    const frac = (hash % 1000) / 1000;
+    return 0.72 + frac * 0.27; // 0.72–0.99
+}
 
-document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
+function mixColor(low, high, t) {
+    return low.map((c, i) => Math.round(c + (high[i] - c) * t));
+}
+
+const inferStream = document.getElementById('inferStream');
+if (inferStream) {
+    const text = inferStream.getAttribute('data-text') || '';
+    const words = text.split(' ');
+    const coral = [255, 107, 87];
+    const amber = [255, 180, 84];
+
+    words.forEach((word, i) => {
+        const p = seededConfidence(word.replace(/[^a-zA-Z]/g, '') || word);
+        const t = (p - 0.72) / 0.27;
+        const [r, g, b] = mixColor(coral, amber, t);
+        const alpha = 0.14 + t * 0.16;
+
+        const span = document.createElement('span');
+        span.className = 'tok';
+        span.textContent = word;
+        span.title = `p = ${p.toFixed(2)}`;
+        span.style.background = `rgba(${r}, ${g}, ${b}, ${alpha})`;
+        span.style.animationDelay = `${0.4 + i * 0.05}s`;
+        inferStream.appendChild(span);
+        inferStream.appendChild(document.createTextNode(' '));
+    });
+}
 
 /* ===========================
    TYPING EFFECT
@@ -42,6 +70,7 @@ const phrases = [
     'Open Source Author',
     'Backend Developer',
     'Prompt Engineer',
+    'AI Consultant',
 ];
 
 const typingEl = document.getElementById('typingEffect');
@@ -131,29 +160,6 @@ pills.forEach(pill => {
 =========================== */
 document.getElementById('backTop').addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-/* ===========================
-   3D CARD TILT
-=========================== */
-const tiltCards = document.querySelectorAll('.app-card, .proj-card');
-
-tiltCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        card.style.transition = 'transform 0.08s ease, border-color 0.2s ease, box-shadow 0.2s ease';
-    });
-
-    card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width - 0.5;
-        const y = (e.clientY - rect.top) / rect.height - 0.5;
-        card.style.transform = `perspective(900px) rotateX(${-y * 6}deg) rotateY(${x * 7}deg) translateY(-4px)`;
-    });
-
-    card.addEventListener('mouseleave', () => {
-        card.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), border-color 0.2s ease, box-shadow 0.2s ease';
-        card.style.transform = '';
-    });
 });
 
 /* ===========================
