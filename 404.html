@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Message sent — Swanand Potnis</title>
+  <title>Page not found — Swanand Potnis</title>
   <meta name="robots" content="noindex">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,21 +30,13 @@
 <body>
   <main>
     <div class="box">
-      <div class="mono">Message sent</div>
-      <h1>Thanks — got it.</h1>
-      <p>I'll read it and reply within a day. If it's urgent, message me on LinkedIn.</p>
+      <div class="mono">404</div>
+      <h1>This page doesn’t exist.</h1>
+      <p>The link may be old or mistyped. Everything lives on the main page.</p>
       <div class="btns">
         <a href="/" class="btn btn-solid">Back to portfolio</a>
         <a href="https://www.linkedin.com/in/swanandpotnis/" target="_blank" rel="noopener" class="btn">LinkedIn ↗</a>
       </div>
-      <p class="note" id="timer" aria-live="polite"></p>
-      <script>
-        var s = 10, el = document.getElementById('timer');
-        var t = setInterval(function () {
-          el.textContent = 'Returning to the portfolio in ' + s + 's…';
-          if (s-- <= 0) { clearInterval(t); window.location.href = '/'; }
-        }, 1000);
-      </script>
     </div>
   </main>
 </body>
