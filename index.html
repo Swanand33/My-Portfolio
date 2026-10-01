@@ -7,7 +7,7 @@
   <meta name="description" content="Swanand Potnis — AI Engineer. Portfolio of AI/ML projects, case studies, and engineering work.">
   <link rel="canonical" href="https://swanand33.netlify.app/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#f2efe8">
+  <meta name="theme-color" content="#f3f4f0">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Swanand Potnis — AI Engineer">
   <meta property="og:title" content="Swanand Potnis — AI Engineer">
@@ -25,27 +25,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f2efe8;
-      --ink: #191811;
-      --body: #46422f;
-      --muted: #6c6757;
-      --rule: #d8d3c7;
-      --rule2: #e2ddd1;
-      --panel: #eae6dc;
-      --hover: #ece8de;
-      --accent: #ad4427;
-      --inv-bg: #191811;
-      --inv-text: #f2efe8;
-      --inv-body: #b6b1a0;
-      --inv-muted: #8b8674;
-      --inv-rule: #35332a;
-      --inv-line: #4a473c;
-      --inv-field: #211f17;
-      --code-base: #dcd8c9;
-      --code-com: #8b8674;
-      --code-kw: #d98b5f;
-      --code-str: #a8b98a;
-      --code-fn: #e8e4d5;
+      --bg: #f3f4f0;
+      --ink: #141a17;
+      --body: #3d4842;
+      --muted: #5f6a63;
+      --rule: #d3d8d1;
+      --rule2: #e1e5df;
+      --panel: #e8ebe5;
+      --hover: #e9ebe5;
+      --accent: #1d6b47;
+      --inv-bg: #141a17;
+      --inv-text: #eef1ec;
+      --inv-body: #a9b5ad;
+      --inv-muted: #85918a;
+      --inv-rule: #2c3530;
+      --inv-line: #3f4a44;
+      --inv-field: #1b221e;
+      --code-base: #d7ddd8;
+      --code-com: #85918a;
+      --code-kw: #7fc8a0;
+      --code-str: #d9b77a;
+      --code-fn: #eef1ec;
+      --code-pass: #7fd3a0;
       --mono: 'JetBrains Mono', ui-monospace, monospace;
       --sans: Archivo, Helvetica, Arial, sans-serif;
     }
@@ -60,7 +61,8 @@
     img { display: block; max-width: 100%; }
     h1, h2, h3, p, dl, dd { margin: 0; }
     @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .hero { animation: none !important; } }
+    @keyframes line-in { from { opacity: 0; } to { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .hero { animation: none !important; } .case::details-content { transition: none !important; } }
 
     .wrap { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
     .mono { font-family: var(--mono); letter-spacing: 0.1em; text-transform: uppercase; }
@@ -78,7 +80,7 @@
     .btns { display: flex; flex-wrap: wrap; gap: 14px; }
 
     /* Header */
-    header { position: sticky; top: 0; z-index: 50; background: rgba(242,239,232,0.92); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--rule); }
+    header { position: sticky; top: 0; z-index: 50; background: rgba(243,244,240,0.92); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--rule); }
     .headbar { height: 58px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
     .wordmark { font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; }
     .nav { display: flex; align-items: center; gap: clamp(14px, 2vw, 28px); font-size: 11.5px; color: var(--muted); white-space: nowrap; }
@@ -130,12 +132,22 @@
     .panel-dark .panel-bar { border-bottom-color: var(--inv-rule); color: var(--inv-muted); }
     .code { margin: 0; padding: 20px; font-family: var(--mono); font-size: 13px; line-height: 1.75; overflow-x: auto; }
     .c-com { color: var(--code-com); } .c-kw { color: var(--code-kw); } .c-fn { color: var(--code-fn); } .c-str { color: var(--code-str); }
+    .code-run { display: flex; justify-content: space-between; gap: 12px; padding: 12px 20px; border-top: 1px solid var(--inv-rule); font-family: var(--mono); font-size: 12px; }
+    .code-pass { color: var(--code-pass); }
+    /* Code panel plays once when scrolled into view (JS adds .armed, then .running) */
+    .armed .ln, .armed .code-run { opacity: 0; }
+    .running .ln { animation: line-in .3s ease forwards; animation-delay: calc(var(--i) * 70ms); }
+    .running .code-run { animation: line-in .4s ease forwards; animation-delay: calc(var(--n) * 70ms + 300ms); }
 
     /* Case studies */
     .case { border-bottom: 1px solid var(--rule); }
     .case summary { list-style: none; cursor: pointer; padding: 26px 0; display: grid; grid-template-columns: 46px minmax(0, 300px) minmax(0, 1fr) 30px; gap: 24px; align-items: baseline; }
     .case summary::-webkit-details-marker { display: none; }
+    .case summary { transition: background .15s ease; }
     .case summary:hover { background: var(--hover); }
+    .case { interpolate-size: allow-keywords; }
+    .case::details-content { height: 0; overflow: clip; transition: height .3s ease, content-visibility .3s allow-discrete; }
+    .case[open]::details-content { height: auto; }
     .case-num { font-family: var(--mono); font-size: 12px; color: var(--muted); }
     .case-name { display: block; font-size: 26px; font-weight: 600; letter-spacing: -0.02em; }
     .case-meta { display: block; margin-top: 8px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; }
@@ -177,6 +189,7 @@
 
     /* Contact */
     .contact { margin-top: 110px; background: var(--inv-bg); color: var(--inv-text); }
+    .contact :focus-visible { outline-color: var(--inv-text); }
     .contact .wrap { padding-top: 96px; padding-bottom: 84px; }
     .contact-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 72px; align-items: start; }
     .contact .label { font-size: 11.5px; letter-spacing: 0.12em; color: var(--inv-muted); }
@@ -191,7 +204,7 @@
     .field > span { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--inv-muted); }
     .field input, .field textarea, .field select { width: 100%; background: var(--inv-field); border: 1px solid var(--inv-rule); color: var(--inv-text); padding: 13px 14px; font-family: var(--sans); font-size: 15px; }
     .field select { appearance: none; -webkit-appearance: none; padding-right: 38px; cursor: pointer;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%238b8674' stroke-width='1.5'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%2385918a' stroke-width='1.5'/%3E%3C/svg%3E");
       background-repeat: no-repeat; background-position: right 14px center; }
     .field select option { background: var(--inv-field); color: var(--inv-text); }
     .field textarea { resize: vertical; }
@@ -215,6 +228,7 @@
       .portrait, .portrait-caption { max-width: 320px; margin-left: auto; margin-right: auto; }
       .portrait-caption { text-align: center; }
       .code { font-size: 11.5px; padding: 16px; }
+      .code-run { padding: 12px 16px; font-size: 11px; }
     }
     @media (max-width: 900px) {
       .burger { display: flex; }
@@ -367,6 +381,7 @@
     output = my_support_bot(<span class="c-str">"I want a refund for order 1234"</span>)
     result = DriftTest.compare(<span class="c-str">"support_refund_flow"</span>, output)
     <span class="c-kw">assert</span> result.passed</code></pre>
+          <div class="code-run"><span class="c-com">$ pytest test_support.py</span><span class="code-pass">2 passed</span></div>
         </div>
       </article>
     </section>
@@ -633,6 +648,23 @@
   </section>
 
   <script>
+    // Play the llm-behave panel once: reveal code line by line, then the test result
+    (function () {
+      var panel = document.querySelector('.panel-dark');
+      var code = panel && panel.querySelector('.code code');
+      if (!code || !('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var lines = code.innerHTML.split('
+');
+      code.innerHTML = lines.map(function (l, i) { return '<span class="ln" style="--i:' + i + '">' + l + '</span>'; }).join('
+');
+      panel.style.setProperty('--n', lines.length);
+      panel.classList.add('armed');
+      var io = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) { panel.classList.add('running'); io.disconnect(); }
+      }, { threshold: 0.4 });
+      io.observe(panel);
+    })();
+
     // Close the mobile menu after picking a link
     document.querySelectorAll('.nav a').forEach(function (a) {
       a.addEventListener('click', function () { document.getElementById('nav-toggle').checked = false; });
